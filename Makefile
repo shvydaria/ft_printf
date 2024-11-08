@@ -6,7 +6,7 @@
 #    By: dshvydka <dshvydka@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/31 19:44:09 by dshvydka          #+#    #+#              #
-#    Updated: 2024/11/07 14:30:46 by dshvydka         ###   ########.fr        #
+#    Updated: 2024/11/08 15:18:30 by dshvydka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC_DIR		= src/
 OBJ_DIR		= obj/
 
 #Sources
-SRC_FILES	=	ft_printf, ft_printf_char, ft_printf_str, ft_printf_num_s
+SRC_FILES	=	ft_printf, ft_printf_char, ft_printf_str, ft_printf_num_s, ft_printf_num_u
 SRC 		= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 OBJF		=	.cache_exists
