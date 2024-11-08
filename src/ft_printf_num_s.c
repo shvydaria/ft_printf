@@ -6,7 +6,7 @@
 /*   By: dshvydka <dshvydka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:24:57 by dshvydka          #+#    #+#             */
-/*   Updated: 2024/11/07 14:31:15 by dshvydka         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:52:05 by dshvydka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ int	ft_printf_num_s(int num)
 	char	*str;
 	int		len;
 
-	len = 0;
 	str = ft_itoa(num);
-	if (str)
+	if (!str)
+		return (-1);
+	len = ft_strlen(str);
+	if (write(1, str, len) == -1)
 	{
-		len = ft_strlen(str);
-		write(1, str, len);
 		free(str);
+		return (-1);
 	}
-	else
-		return (0);
+	free(str);
 	return (len);
 }
