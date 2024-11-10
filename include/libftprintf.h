@@ -23,11 +23,14 @@ int			ft_printf_percent(void);
 int			ft_printf_str(char *str);
 int			ft_printf_num_s(int num);
 int			ft_printf_num_u(unsigned int num);
-
+int ft_printf_hex(unsigned int num, int is_uppercase);
+int ft_printf_pointer(void *ptr);
 // helpers
 int			ft_putstr(char *str);
-char		*ft_itoa_unsigned(unsigned int n);
+char		*ft_utoa(unsigned int n);
+char	*ft_utoa_base(unsigned long n, int is_uppercase);
 static int	get_num_len(long num);
 static void	fill_str(char *str, long num, int len);
+static void	fill_str_hex(char *str, unsigned int num, int len, int is_uppercase);
 
 #endif
