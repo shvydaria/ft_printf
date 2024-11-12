@@ -6,7 +6,7 @@
 /*   By: dshvydka <dshvydka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:33:04 by dshvydka          #+#    #+#             */
-/*   Updated: 2024/11/08 14:55:06 by dshvydka         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:56:57 by dshvydka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	fill_str(char *str, long num, int len)
 	}
 }
 
-char	*ft_itoa_unsigned(unsigned int n)
+char	*ft_utoa(unsigned int n)
 {
 	int				len;
 	char			*result;
@@ -60,7 +60,7 @@ int	ft_printf_num_u(unsigned int num)
 	char	*str;
 	int		len;
 
-	str = ft_itoa_unsigned(num);
+	str = ft_utoa(num);
 	if (!str)
 		return (-1);
 	len = ft_strlen(str);

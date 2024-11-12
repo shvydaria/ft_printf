@@ -6,7 +6,7 @@
 /*   By: dshvydka <dshvydka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:22:20 by dshvydka          #+#    #+#             */
-/*   Updated: 2024/11/08 14:46:44 by dshvydka         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:57:53 by dshvydka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // %c Prints a single character.
 // %% Prints a percent sign.
-int	ft_printf_char(int c)
+int	ft_printf_char(char c)
 {
 	if (write(1, &c, 1) == -1)
 		return (-1);
