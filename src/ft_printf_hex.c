@@ -17,7 +17,7 @@
 
 #include "libftprintf.h"
 
-static int	get_num_len(long num)
+int	get_num_len_base(long num, int base)
 {
 	int	len;
 
@@ -26,7 +26,7 @@ static int	get_num_len(long num)
 		return (1);
 	while (num > 0)
 	{
-		num /= 16;
+		num /= base;
 		len++;
 	}
 	return (len);
@@ -53,7 +53,7 @@ char	*ft_utoa_base(unsigned long n, int is_uppercase)
 	if (n == 0)
 		return (ft_strdup("0"));
 
-	len = get_num_len(n);
+	len = get_num_len_base(n, 16);
 	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);

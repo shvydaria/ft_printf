@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 int			ft_printf(const char *format, ...);
-int			ft_printf_char(int c);
+int			ft_printf_char(char c);
 int			ft_printf_percent(void);
 int			ft_printf_str(char *str);
 int			ft_printf_num_s(int num);
