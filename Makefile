@@ -6,12 +6,12 @@
 #    By: dshvydka <dshvydka@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/31 19:44:09 by dshvydka          #+#    #+#              #
-#    Updated: 2024/11/08 15:18:30 by dshvydka         ###   ########.fr        #
+#    Updated: 2024/11/13 13:56:54 by dshvydka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I../include
+CFLAGS = -Wall -Wextra -Werror -I
 NAME = libftprintf.a
 RMF = rm -f
 RMRF = rm -rf
@@ -26,7 +26,7 @@ SRC_DIR		= src/
 OBJ_DIR		= obj/
 
 #Sources
-SRC_FILES	=	ft_printf, ft_printf_char, ft_printf_str, ft_printf_num_s, ft_printf_num_u
+SRC_FILES	=	ft_printf ft_printf_char ft_printf_str ft_printf_num_s ft_printf_num_u ft_printf_hex
 SRC 		= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 OBJF		=	.cache_exists
