@@ -6,7 +6,7 @@
 /*   By: dshvydka <dshvydka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 21:23:39 by dshvydka          #+#    #+#             */
-/*   Updated: 2024/11/13 14:05:48 by dshvydka         ###   ########.fr       */
+/*   Updated: 2024/11/13 15:10:45 by dshvydka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int		ft_printf_pointer(void *ptr);
 int		ft_putstr(char *str);
 char	*ft_utoa(unsigned int n);
 char	*ft_utoa_base(unsigned long n, int is_uppercase);
-int		get_num_len_base(long num, int base);
+int		get_num_len_base(unsigned long num, int base);
 
 #endif

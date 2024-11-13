@@ -6,7 +6,7 @@
 /*   By: dshvydka <dshvydka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:23:21 by dshvydka          #+#    #+#             */
-/*   Updated: 2024/11/12 13:49:32 by dshvydka         ###   ########.fr       */
+/*   Updated: 2024/11/13 15:12:42 by dshvydka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "libftprintf.h"
 
-int	get_num_len_base(long num, int base)
+int	get_num_len_base(unsigned long num, int base)
 {
 	int	len;
 
@@ -32,7 +32,8 @@ int	get_num_len_base(long num, int base)
 	return (len);
 }
 
-static void	fill_str_hex(char *str, unsigned int num, int len, int is_uppercase)
+static void	fill_str_hex(char *str, unsigned long int num, int len,
+		int is_uppercase)
 {
 	char	*digits;
 
@@ -68,7 +69,7 @@ int	ft_printf_hex(unsigned int num, int is_uppercase)
 	char	*hex_str;
 	int		len;
 
-	hex_str = ft_utoa_base(num, is_uppercase);
+	hex_str = ft_utoa_base((unsigned long)num, is_uppercase);
 	if (!hex_str)
 		return (-1);
 	len = write(1, hex_str, ft_strlen(hex_str));
@@ -85,14 +86,18 @@ int	ft_printf_pointer(void *ptr)
 	int				hex_len;
 	int				len;
 
+	if (!ptr)
+		return (write(1, "0x0", 3));
 	address = (unsigned long)ptr;
 	hex_str = ft_utoa_base(address, 0);
 	if (!hex_str)
 		return (-1);
 	len = write(1, "0x", 2);
-	free(hex_str);
 	if (len == -1)
+	{
+		free(hex_str);
 		return (-1);
+	}
 	hex_len = write(1, hex_str, ft_strlen(hex_str));
 	free(hex_str);
 	if (hex_len == -1)
