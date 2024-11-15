@@ -6,7 +6,7 @@
 /*   By: dshvydka <dshvydka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:06 by dshvydka          #+#    #+#             */
-/*   Updated: 2024/11/13 14:03:45 by dshvydka         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:07:41 by dshvydka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (total_chars);
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = 'c';
-// 	ft_printf("%c", c);
-// }
